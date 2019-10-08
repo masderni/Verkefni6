@@ -155,6 +155,7 @@ h1 {
         margin-bottom: 20px;
     }
     .card__sm{
+        padding-left: 0px;
         max-width: none;
         max-height: none;
         background-color: none;
@@ -165,8 +166,11 @@ h1 {
     .cards__sm{
         margin-bottom: 20px;
     }
-    .card__image__sm{
-
+    .card__img__sm{
+        max-width: none;
+    }
+    .card__content__sm{
+        flex-direction: column;
     }
 }
 
@@ -181,5 +185,12 @@ h1 {
     }
     .cards__col__la{
         width: 33.33333333%; /*ekki flott laga*/
+    }
+}
+
+@media (min-width: 1490px){
+    .main__ll{
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }

@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    font-family: 'Open Sans', helvetica, arial, sans-serif;
+    font-size: 16px;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 1450px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* TODO taka ætti padding af main þegar komið er fyrir ofan hámarksbreidd */
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+  
+.text {
+    margin-bottom: 20px;
+}
+  
+.text p {
+    margin-bottom: 20px;
+}
+  
+.image {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+  
+  /* grid fyrir efni, setja þarf upp í html */
+
+.grid__row {
+    display: flex;
+    flex-direction: column;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+  
+.grid__col {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.cards__row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: 40px;
+}
+.cards__col{
+    Width: 50%;
+    padding-right: 10px;
+    padding-left: 10px;
+    /*þarf kannski að breyta ehv*/
+}
+  
+  /* TODO setja upp grid fyrir >= 1000px */
+  
+  /* TODO koma mynd fyrir á öðrum stað í < 1000px */
+  
+  /* grid fyrir cards */
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 470px;
+    max-height: 320px;
+    overflow: auto;
+
+    background-color: #fff;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+}
+
+.card__title {
+    margin-bottom: 20px;
+
+    font-size: 1.5em;
+    line-height: 1;
+    word-break: break-word;
+}
+
+.card__content {
+    display: flex;
+    flex: 1;
+}
+
+.card__text {
+    font-size: 1em;
+    line-height: 1.20;
+    word-break: break-word;
+}
+
+.card__image {
+    padding-right: 20px;
+    flex: 0 0 150px;
+}
+
+.card__img {
+    max-width: 100%;
+}
+
+.card__tags {
+    margin-top: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    list-style: none;
+}
+
+.card__tag {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.cards--first-flex-item{
+    order: -1;
+}
+
+@media (max-width: 699px){
+    .cards__col__sm{
+        width: 100%;
+    }
+    .card__text__sm{
+        margin-bottom: 20px;
+    }
+    .card__sm{
+        max-width: none;
+        max-height: none;
+        background-color: none;
+        border-radius: none;
+        border: none;
+        border-bottom: 2px solid #aaa;
+    }
+    .cards__sm{
+        margin-bottom: 20px;
+    }
+    .card__image__sm{
+
+    }
+}
+
+@media (min-width: 1000px){
+    .grid__row__la{
+        flex-direction: none;
+        flex-direction: row;
+    }
+    .grid__col__la{
+        width: 50%;
+        margin-bottom: 40px;
+    }
+    .cards__col__la{
+        width: 33.33333333%; /*ekki flott laga*/
+    }
+}

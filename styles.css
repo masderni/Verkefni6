@@ -48,6 +48,9 @@ h1 {
     margin-left: -10px;
     margin-right: -10px;
 }
+.grid__row__rev{
+    flex-direction: column-reverse;
+}
   
 .grid__col {
     width: 100%;
